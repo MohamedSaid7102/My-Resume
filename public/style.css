@@ -216,8 +216,73 @@ body {
 /* End section one styling */
 
 /* Start section two styling */
+/* experience section */
 .cv-wrapper .experience-info {
   background-color: #fff;
   color: #333;
+
+  padding: 2rem;
 }
+
+.experience-info .header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+}
+
+.experience-info .experience-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-items .experience__item {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.experience__item .experience__data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience__data :is(.working-company, .working-date) {
+  margin: 0;
+}
+
+.experience__data .working-date {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.experience__data .working-company {
+  text-align: center;
+  font-weight: 600;
+}
+
+.experience__item .experience__role {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.5;
+
+  position: relative;
+  top: -5px;
+}
+
+.experience__role :is(.role,.responsibilities) {
+  margin: 0;
+}
+
+.experience__role .role {
+  color: var(--acceny-color);
+  font-weight: 700;
+}
+
+/* Projects section */
+
 /* End section two styling */
