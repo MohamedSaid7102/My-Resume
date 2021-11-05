@@ -45,6 +45,17 @@ body {
 
   margin: 1rem;
 }
+
+@media (max-width: 685px) {
+  .cv-wrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 350px) {
+  .cv-wrapper {
+    width: 275px;
+  }
+}
 /* Start section one styling */
 .cv-wrapper .personal-info {
   background-color: var(--secondary-color);
@@ -224,7 +235,8 @@ body {
   padding: 2rem;
 }
 
-.experience-info .header {
+.experience-info .header,
+.projects-section .header {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -242,6 +254,13 @@ body {
   gap: 2.5rem;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+@media (max-width: 448px) {
+  .experience-items .experience__item {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .experience__item .experience__data {
@@ -274,7 +293,7 @@ body {
   top: -5px;
 }
 
-.experience__role :is(.role,.responsibilities) {
+.experience__role :is(.role, .responsibilities) {
   margin: 0;
 }
 
@@ -284,5 +303,62 @@ body {
 }
 
 /* Projects section */
+.projects-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+.projects-items .project__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project__item .project__title {
+  text-decoration: none;
+}
+
+.project__item .header {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--acceny-color);
+}
+.project__item .project__description {
+  text-decoration: none;
+  color: #333;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+/* Skills section */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.skills-section h2,
+.skills-section h3 {
+  margin: 0;
+}
+
+.skills-items .header {
+  font-size: 1.8rem;
+}
+.skills-items ul {
+  list-style-type: symbols(cyclic '🎯');
+}
+.skills-items ul li {
+  margin-block: 1rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.skills-section .web-skills {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-right: 5rem;
+}
 /* End section two styling */
